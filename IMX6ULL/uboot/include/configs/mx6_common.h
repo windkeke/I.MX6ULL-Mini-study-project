@@ -14,6 +14,11 @@
 #define CONFIG_LED1          IMX_GPIO_NR(1, 3)
 #define CONFIG_LED2          IMX_GPIO_NR(1, 4)
 
+/* BUZZER configuration  */
+#define CONFIG_BUZZER_IOMUXC   MX6_PAD_GPIO1_IO03__GPIO1_IO03
+#define CONFIG_BUZZER          IMX_GPIO_NR(1, 3)
+
+
 /* ALIENTEK DISPLAY configuration number */
 #define CONFIG_ATKVGA_DISPLAY			7
 #define CONFIG_ATKHDMI_DISPLAY                  6

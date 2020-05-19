@@ -78,6 +78,7 @@ extern int prom_init(void);
 #endif
 
 extern int imx6_light_up_led2 (void);
+extern int imx6_buzzer_up (void);
 
 ulong monitor_flash_len;
 
@@ -990,6 +991,8 @@ init_fnc_t init_sequence_r[] = {
 
 	/* Light up LED2 */
         imx6_light_up_led2,
+	/* Open the buzzer for 100ms */
+		imx6_buzzer_up,
 
 	run_main_loop,
 };

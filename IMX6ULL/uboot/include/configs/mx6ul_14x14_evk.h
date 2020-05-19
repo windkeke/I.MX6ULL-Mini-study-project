@@ -35,6 +35,9 @@
 #define CONFIG_LED1          IMX_GPIO_NR(1, 3)
 #define CONFIG_LED2          IMX_GPIO_NR(1, 4)
 
+/* BUZZER configuration(蜂鸣器配置)  */
+#define CONFIG_BUZZER_IOMUXC   MX6_PAD_SNVS_TAMPER3__GPIO5_IO03
+#define CONFIG_BUZZER          IMX_GPIO_NR(5, 3)
 
 #define is_mx6ul_9x9_evk()	CONFIG_IS_ENABLED(TARGET_MX6UL_9X9_EVK)
 

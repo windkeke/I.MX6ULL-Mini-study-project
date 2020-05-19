@@ -1091,6 +1091,10 @@ static iomux_v3_cfg_t const leds_pads[] = {
 	CONFIG_LED2_IOMUXC | MUX_PAD_CTRL(NO_PAD_CTRL),
 };
 
+static iomux_v3_cfg_t const buzzer_pads[] = {
+	CONFIG_BUZZER_IOMUXC | MUX_PAD_CTRL(NO_PAD_CTRL),
+};
+
 int imx6_light_up_led1 (void) {
 	gpio_direction_output(CONFIG_LED1, 0);
 	return 0;
@@ -1098,6 +1102,13 @@ int imx6_light_up_led1 (void) {
 
 int imx6_light_up_led2 (void) {
 	gpio_direction_output(CONFIG_LED2, 0);
+	return 0;
+}
+
+int imx6_buzzer_up (void) {
+	gpio_direction_output(CONFIG_BUZZER, 0);
+	udelay(100*1000);
+	gpio_direction_output(CONFIG_BUZZER, 1);
 	return 0;
 }
 
